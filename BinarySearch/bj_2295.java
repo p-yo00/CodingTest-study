@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+// 문제 링크: https://www.acmicpc.net/problem/2295
 public class bj_2295 {
 
     // 이진 탐색을 쓰지만 시간복잡도가 약 O(N^2logN)으로 시간 초과
