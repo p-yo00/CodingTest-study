@@ -2,6 +2,7 @@ package org.example.BinarySearch;
 
 import java.util.Arrays;
 
+// 문제 주소 : https://school.programmers.co.kr/learn/courses/30/lessons/43238
 public class pg_43238 {
 
     public static long solution(int n, int[] times) {
