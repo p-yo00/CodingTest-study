@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// 문제 링크: https://www.acmicpc.net/problem/2606
 public class bj_2606 {
 
     public static void dfs(Map<Integer, List<Integer>> computers, boolean[] visited, int x) {
