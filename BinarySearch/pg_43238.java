@@ -6,28 +6,26 @@ import java.util.Arrays;
 public class pg_43238 {
 
     public static long solution(int n, int[] times) {
-        long answer = 0;
-        long left = 1;
-        long right = times[0];
-        for (int time : times) {
-            right = Math.min(right, time);
-        }
-        right *= n;
+        Arrays.sort(times);
+        long lp = 0;
+        long rp = times[times.length - 1] * (long) n;
+        long mid = 0;
 
-        while (left <= right) {
-            long mid = left + (right - left) / 2;
-            long cur = 0;
+        while (lp < rp) {
+            mid = (lp + rp) / 2;
+            long sum = 0;
+
             for (int time : times) {
-                cur += mid/time;
-                if (cur > n) break;
+                sum += mid / time;
             }
-            if (cur < n) {
-                left = mid + 1;
-            } else if (cur >= n) {
-                answer = mid;
-                right = mid - 1;
+
+            if (sum >= n) {
+                rp = mid;
+            } else {
+                lp = mid + 1;
             }
         }
-        return answer;
+
+        return (lp + rp) / 2;
     }
 }
